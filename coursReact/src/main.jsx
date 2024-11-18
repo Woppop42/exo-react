@@ -6,9 +6,15 @@ import { Parag } from './EXO 1/Parag.jsx'
 import { Image } from './EXO 1/Image.jsx'
 import { Parent } from './EXO 2/Parent/Parent.jsx'
 import { Children } from './EXO 2/Children/Children.jsx'
+import { Card } from './Card/Card.jsx'
+import { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher.jsx'
+import { MagicCounter } from './EXO 3/MagicCounter.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Parent> <Children /> </Parent>
+    <Card />
+    <ThemeSwitcher />
+    <MagicCounter />
   </StrictMode>,
 )
