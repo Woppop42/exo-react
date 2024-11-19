@@ -1,21 +1,19 @@
 import { useEffect, useState} from 'react';
 
 export function ResponsiveBackground(){
-    const [color, setColor] = useState('#ADD8E6');
-    const [width, setWidth] = useState(1920);
+    const [color, setColor] = useState(window.innerWidth >= 800 ? '#ADD8E6' : '#FFC0CB');
+    const [width, setWidth] = useState(window.innerWidth);
     useEffect(() => {
         const handleSize = () => {
             setWidth(window.innerWidth);
-            width >= 800 ? setColor('#ADD8E6') : setColor('#FFC0CB');
-            return width;
+            setColor(window.innerWidth >= 800 ? '#ADD8E6' : '#FFC0CB');
+ 
         }
         window.addEventListener('resize', handleSize);
+
         return() =>{
             window.removeEventListener('resize', handleSize);
         }
     }, [])
-    const style = {
-        backgroundColor: color
-    }
-    return <p style={style}>Largeur de la fenêtre : {width}</p>
+    return <p style={{backgroundColor: color}}>Largeur de la fenêtre : {width}</p>
 }
