@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function MagicCounter()
 {
     const [count, setCount] = useState(0);
+    useEffect(() => {
+        //Code s'éxécutant après le rendu du component
+        document.title = `Compteur ${count}`
+            //Return optionnel pour nettoyer les effets
+    
+    }, [ count ] // => Tableau de dépendances
+    )
     const style = 
     {
         backgroundColor: count %5 === 0 ? '#D4F1F4' : '#FDEDEC'

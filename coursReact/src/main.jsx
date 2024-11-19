@@ -9,12 +9,17 @@ import { Children } from './EXO 2/Children/Children.jsx'
 import { Card } from './Card/Card.jsx'
 import { ThemeSwitcher } from './ThemeSwitcher/ThemeSwitcher.jsx'
 import { MagicCounter } from './EXO 3/MagicCounter.jsx'
+import { Timer } from './Timer/Timer.jsx'
+// import { WindowWidthTracker } from './WindowWidthTracker/WindowWidthTracker.jsx'
+import { ResponsiveBackground } from './EXO 4/ResponsiveBackground.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Parent> <Children /> </Parent>
+    <ResponsiveBackground />
     <Card />
     <ThemeSwitcher />
     <MagicCounter />
+    <Timer />
   </StrictMode>,
 )
