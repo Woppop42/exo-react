@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './EXO 1/App.jsx'
+// import App from './EXO 1/App.jsx'
 import { Title } from './Title/Title.jsx'
 import { Parag } from './EXO 1/Parag.jsx'
 import { Image } from './EXO 1/Image.jsx'
@@ -12,14 +12,10 @@ import { MagicCounter } from './EXO 3/MagicCounter.jsx'
 import { Timer } from './Timer/Timer.jsx'
 // import { WindowWidthTracker } from './WindowWidthTracker/WindowWidthTracker.jsx'
 import { ResponsiveBackground } from './EXO 4/ResponsiveBackground.jsx'
+import { App } from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Parent> <Children /> </Parent>
-    <ResponsiveBackground />
-    <Card />
-    <ThemeSwitcher />
-    <MagicCounter />
-    <Timer />
-  </StrictMode>,
+    <App />
+  </StrictMode>
 )
